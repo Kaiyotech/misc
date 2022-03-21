@@ -24,6 +24,9 @@ if "%ERRORLEVEL%"=="0" goto a
 REM kill anything you started that you don't want after Rocket League ends, put any settings back
 taskkill /IM "Gif Your Game.exe" /F /T
 taskkill /IM "Overwolf.exe" /F /T
+REM save your existing settings back to _actual so they get updated with changes in game
+copy /b/v/y "C:\Users\user\Documents\My Games\Rocket League\TAGame\Config\TASystemSettings.ini" "C:\Users\user\Documents\My Games\Rocket League\TAGame\Config\TASystemSettings_actual.ini"
+copy /b/v/y "C:\Users\user\AppData\Roaming\bakkesmod\bakkesmod\cfg\plugins.cfg" "C:\Users\user\AppData\Roaming\bakkesmod\bakkesmod\cfg\plugins_actual.cfg"
 REM put bot systemsettings back
 copy /b/v/y "C:\Users\user\Documents\My Games\Rocket League\TAGame\Config\TASystemSettings_bots.ini" "C:\Users\user\Documents\My Games\Rocket League\TAGame\Config\TASystemSettings.ini"
 copy /b/v/y "C:\Users\user\AppData\Roaming\bakkesmod\bakkesmod\cfg\plugins_bots.cfg" "C:\Users\user\AppData\Roaming\bakkesmod\bakkesmod\cfg\plugins.cfg"
